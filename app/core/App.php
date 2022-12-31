@@ -9,6 +9,7 @@ class App {
     public function __construct() {
         $url = $this->parseURL();
 
+        // untuk membuat null di public/index tidak error
         if($url==NULL) {
             $url = [$this->controller];
         }
@@ -37,7 +38,7 @@ class App {
 
         // jalankan controller & method, serta kirimkan paramas jika ada
         call_user_func_array([$this->controller, $this->method], $this->params);
-        
+
     }
 
     //routing methode
