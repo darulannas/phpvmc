@@ -1,7 +1,5 @@
 <?php
 
-use function PHPSTORM_META\type;
-
 class Database
 {
     private $host = DB_HOST;
@@ -11,7 +9,7 @@ class Database
 
     //database handler
     private $dbh;
-    //statement
+    //database statement
     private $stmt;
 
     public function __construct()
