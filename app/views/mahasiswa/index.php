@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-lg-6">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+            <button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">
                 Tambah Data Mahasiswa
             </button>
             <h3 class="mt-3">Daftar Mahasiswa</h3>
@@ -18,6 +18,7 @@
                     <li class="list-group-item">
                         <?php echo $mhs["nama"] ?>
                         <a href="<?php echo BASEURL; ?>/mahasiswa/hapus/<?php echo $mhs["id"]; ?>" class="badge badge-danger float-right ml-1 " onclick="return confirm('yakin?');">hapus</a>
+                        <a href="<?php echo BASEURL; ?>/mahasiswa/ubah/<?php echo $mhs["id"]; ?>" class="badge badge-success float-right ml-1 tampilModalUbah " data-toggle="modal" data-target="#formModal" data-id="<?php echo $mhs["id"]; ?>">ubah</a>
                         <a href="<?php echo BASEURL; ?>/mahasiswa/detail/<?php echo $mhs["id"]; ?>" class="badge badge-primary float-right ml-1 ">detail</a>
                     </li>
                 <?php endforeach; ?>
@@ -31,7 +32,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="judulModal">Tambah Data Mahasiswa</h5>
+                <h5 class="modal-title" id="formModalLabel">Tambah Data Mahasiswa</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
