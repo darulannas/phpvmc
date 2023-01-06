@@ -39,17 +39,18 @@
             </div>
             <div class="modal-body">
                 <form action="<?php echo BASEURL; ?>/mahasiswa/tambah" method="post">
+                    <input type="hidden" name="id" id="id">
                     <div class="form-group">
                         <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama" name="nama">
+                        <input type="text" class="form-control" id="nama" name="nama" autocomplete="off" required>
                     </div>
                     <div class="form-group">
                         <label for="nim">NIM</label>
-                        <input type="number" class="form-control" id="nim" name="nim">
+                        <input type="number" class="form-control" id="nim" name="nim" autocomplete="off" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email">
+                        <input type="email" class="form-control" id="email" name="email" autocomplete="off" required>
                     </div>
                     <div class="form-group">
                         <label for="jurusan">Jurusan</label>
